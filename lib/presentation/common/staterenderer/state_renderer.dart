@@ -36,7 +36,7 @@ class StateRenderer extends StatelessWidget {
   Widget _getStateWidget() {
     switch (stateRendererType) {
       case StateRendererType.fullLoadingScreenState:
-        return _getFullScreenWidget([const CircularProgressIndicator()]);
+        return _getFullScreenWidget([const Center(child: CircularProgressIndicator())]);
       case StateRendererType.fullErrorScreenState:
         return _getFullScreenWidget([]);
       case StateRendererType.fullEmptyScreenState:

@@ -27,6 +27,11 @@ class _UsersViewState extends State<UsersView> {
     _viewModel.start();
   }
 
+  @override
+  void dispose() {
+    _viewModel.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -14,17 +14,17 @@ class CreateUserViewModel extends BaseViewModel
   CreateUserViewModel(this._createUserUseCase);
 
   final StreamController _emailStreamController =
-      StreamController<String>();
+      StreamController<String>.broadcast();
   final StreamController _passwordStreamController =
-      StreamController<String>();
+      StreamController<String>.broadcast();
   final StreamController _userNameStreamController =
-      StreamController<String>();
+      StreamController<String>.broadcast();
   final StreamController _genderStreamController =
-      StreamController<String>();
+      StreamController<String>.broadcast();
   final StreamController _roleStreamController =
-      StreamController<String>();
+      StreamController<String>.broadcast();
   final StreamController _allAreValidStreamController =
-      StreamController<void>();
+      StreamController<void>.broadcast();
   var createUserObject = CreateUserObject("", "", "", "", "");
 
   @override
@@ -39,8 +39,11 @@ class CreateUserViewModel extends BaseViewModel
   }
 
   @override
-  void start()  {
+  void start(){
     input.add(LoadingState(type: StateRendererType.fullLoadingScreenState));
+    Future.delayed(const Duration(seconds: 3), () {
+      input.add(ContentState());
+    });
   }
 
   @override

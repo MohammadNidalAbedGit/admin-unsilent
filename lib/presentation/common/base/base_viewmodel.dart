@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:rxdart/rxdart.dart';
+
 import '../staterenderer/state_renderer_impl.dart';
 
 
 
 abstract class BaseViewModel implements BaseViewModelInputs, BaseViewModelOutputs{
-  StreamController streamController=StreamController<FlowState>.broadcast();
+  StreamController<FlowState> streamController=BehaviorSubject<FlowState>();
 
   @override
   void dispose() {

@@ -53,6 +53,7 @@ dependencies:
   retrofit_generator: ^6.0.0+3
   build_runner: ^2.4.9
   dartz: ^0.10.1
+  rxdart: ^0.27.3
 
 dev_dependencies:
   flutter_test:
