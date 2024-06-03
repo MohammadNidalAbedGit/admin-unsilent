@@ -1,5 +1,6 @@
 import 'package:admin_panel_unsilent/app/controllers/navigation_page_controller.dart';
 import 'package:admin_panel_unsilent/presentation/home/view/home.dart';
+import 'package:admin_panel_unsilent/presentation/login/view/login_view.dart';
 import 'package:admin_panel_unsilent/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

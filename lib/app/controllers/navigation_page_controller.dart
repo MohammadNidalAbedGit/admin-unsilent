@@ -22,5 +22,6 @@ class Views{
   static const String dashboard="dashboard";
   static const String users="users";
   static const String createUser="create-user";
+  static const String login="login";
 }
 

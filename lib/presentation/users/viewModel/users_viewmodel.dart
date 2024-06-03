@@ -11,7 +11,7 @@ class UsersViewModel extends BaseViewModel
   @override
   void start() {
     input.add(LoadingState(type: StateRendererType.fullLoadingScreenState));
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 1), () {
       input.add(ContentState());
     });
   }

@@ -39,12 +39,7 @@ class CreateUserViewModel extends BaseViewModel
   }
 
   @override
-  void start(){
-    input.add(LoadingState(type: StateRendererType.fullLoadingScreenState));
-    Future.delayed(const Duration(seconds: 3), () {
-      input.add(ContentState());
-    });
-  }
+  void start(){}
 
   @override
   create() async {

@@ -1,5 +1,6 @@
 import 'package:admin_panel_unsilent/app/controllers/navigation_page_controller.dart';
 import 'package:admin_panel_unsilent/presentation/createuser/view/create_user_view.dart';
+import 'package:admin_panel_unsilent/presentation/login/view/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -41,6 +42,8 @@ class Home extends StatelessWidget {
                       selectedScreen = const UsersView();
                     case Views.createUser:
                       selectedScreen = const CreateUserView();
+                    case Views.login:
+                      selectedScreen = const LoginView();
                     default:
                       selectedScreen=Container();
                   }
