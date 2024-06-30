@@ -5,6 +5,7 @@ import '../../../app/controllers/navigation_page_controller.dart';
 import '../../../app/controllers/menu_app_controller.dart';
 import '../../../responsive.dart';
 import '../../resources/color_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../../resources/string_manager.dart';
 
 class HeaderUsersView extends StatelessWidget {
@@ -29,7 +30,7 @@ class HeaderUsersView extends StatelessWidget {
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
         GestureDetector(
           onTap: (){
-            provider.navigateTo(Views.createUser);
+            provider.navigateTo(Routes.createUser);
           },
           child: Container(
               margin: const EdgeInsets.symmetric(

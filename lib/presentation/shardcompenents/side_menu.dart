@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 import '../resources/assets_manager.dart';
+import '../resources/routes_manager.dart';
 import '../resources/string_manager.dart';
 
 class SideMenu extends StatelessWidget {
@@ -25,7 +26,7 @@ class SideMenu extends StatelessWidget {
             title: StringManager.dashboard,
             svgSrc: AssetsManager.menuDashboard,
             press: () {
-              provider.navigateTo(Views.dashboard);
+              provider.navigateTo(Routes.dashboard);
               // Navigator.pop(context);
             },
           ),
@@ -33,7 +34,7 @@ class SideMenu extends StatelessWidget {
             title:StringManager.users,
             svgSrc: AssetsManager.menuUsers,
             press: () {
-              provider.navigateTo(Views.users);
+              provider.navigateTo(Routes.users);
               // Navigator.pop(context);
             },
           ),

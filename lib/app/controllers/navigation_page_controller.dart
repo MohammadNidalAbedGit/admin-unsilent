@@ -1,8 +1,10 @@
 
 import 'package:flutter/cupertino.dart';
 
+import '../../presentation/resources/routes_manager.dart';
+
 class NavigationPageController extends ChangeNotifier{
-  final AppSideMenuState _state =AppSideMenuState(Views.dashboard);
+  final AppSideMenuState _state =AppSideMenuState(Routes.dashboard);
   AppSideMenuState get state=> _state;
 
   void navigateTo(String screen){
@@ -18,10 +20,5 @@ class AppSideMenuState{
   AppSideMenuState(this.selectedScreen);
 }
 
-class Views{
-  static const String dashboard="dashboard";
-  static const String users="users";
-  static const String createUser="create-user";
-  static const String login="login";
-}
+
 

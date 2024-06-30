@@ -6,6 +6,7 @@ import '../resources/constants_manager.dart';
 class Field extends StatelessWidget {
   final String hint;
   final Color iconColor;
+  final Color bgColor;
   final Icon icon;
   final TextEditingController controller;
 
@@ -13,7 +14,8 @@ class Field extends StatelessWidget {
       {Key? key,
         required this.hint,
         required this.iconColor,
-        required this.icon, required this.controller})
+        required this.icon, required this.controller,
+        required this.bgColor})
       : super(key: key);
 
   @override
@@ -24,7 +26,8 @@ class Field extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           hintText: hint,
-          fillColor: ColorManager.secondaryColor,
+          hintStyle: TextStyle(color:ColorManager.whiteGrey.withOpacity(0.2)),
+          fillColor: bgColor,
           filled: true,
           border: const OutlineInputBorder(
             borderSide: BorderSide.none,

@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import '../../../app/controllers/menu_app_controller.dart';
 import '../../../responsive.dart';
 import '../../dashboard/view/dashboard_screen.dart';
+import '../../resources/routes_manager.dart';
 import '../../shardcompenents/side_menu.dart';
 import '../../users/view/users_view.dart';
 
@@ -36,13 +37,13 @@ class Home extends StatelessWidget {
                 builder: (context, provider, _) {
                   Widget selectedScreen=Container();
                   switch(provider.state.selectedScreen){
-                    case Views.dashboard:
+                    case Routes.dashboard:
                       selectedScreen = const DashboardScreen();
-                    case Views.users:
+                    case Routes.users:
                       selectedScreen = const UsersView();
-                    case Views.createUser:
+                    case Routes.createUser:
                       selectedScreen = const CreateUserView();
-                    case Views.login:
+                    case Routes.login:
                       selectedScreen = const LoginView();
                     default:
                       selectedScreen=Container();

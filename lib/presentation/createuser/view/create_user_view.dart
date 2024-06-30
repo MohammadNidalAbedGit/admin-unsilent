@@ -8,7 +8,7 @@ import '../../../app/controllers/navigation_page_controller.dart';
 import '../../../responsive.dart';
 import '../../common/staterenderer/state_renderer_impl.dart';
 import '../../resources/color_manager.dart';
-import '../../resources/constants_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../../shardcompenents/text_field.dart';
 import '../viewmodel/create_user_view_model.dart';
 
@@ -94,7 +94,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                   )else
                   IconButton(
                     icon: const Icon(Icons.arrow_back),
-                    onPressed:(){provider.navigateTo(Views.users);}
+                    onPressed:(){provider.navigateTo(Routes.users);}
                   ),
                 Text(
                   StringManager.newUser,
@@ -115,6 +115,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                         icon: const Icon(Icons.email_outlined),
                         iconColor: ColorManager.cottonCandyPink,
                         controller: _emailController,
+                        bgColor: ColorManager.secondaryColor,
                       ));
                 },
               ),
@@ -127,6 +128,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                         icon: const Icon(Icons.lock_outline),
                         iconColor: ColorManager.red,
                         controller: _passwordController,
+                        bgColor: ColorManager.secondaryColor,
                       ));
                 },
               ),
@@ -144,6 +146,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                         icon: const Icon(Icons.person_outline),
                         iconColor: ColorManager.vibrantOrange,
                         controller: _genderController,
+                        bgColor: ColorManager.secondaryColor,
                       ));
                 },
               ),
@@ -156,6 +159,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                         icon: const Icon(Icons.list),
                         iconColor: ColorManager.electricBlue,
                         controller: _roleController,
+                        bgColor: ColorManager.secondaryColor,
                       ));
                 },
               ),
@@ -173,6 +177,7 @@ class _CreateUserViewState extends State<CreateUserView> {
                         icon: const Icon(Icons.verified_user_outlined),
                         iconColor: ColorManager.greenAccent,
                         controller: _userNameController,
+                        bgColor: ColorManager.secondaryColor,
                       ));
                 },
               ),

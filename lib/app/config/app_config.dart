@@ -4,7 +4,9 @@ import 'package:admin_panel_unsilent/data/repository_impl/user_repository_impl.d
 import 'package:admin_panel_unsilent/data/tools/network_info.dart';
 import 'package:admin_panel_unsilent/domain/repository/user_repository.dart';
 import 'package:admin_panel_unsilent/domain/usecase/create_user_usecase.dart';
+import 'package:admin_panel_unsilent/presentation/login/viewmodel/login_view_model.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_keycloak/flutter_keycloak.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
@@ -18,9 +20,10 @@ final store= GetIt.instance;
 
 Future<void> initAppModule()async {
 
+  store.registerLazySingleton(() => FlutterKeycloak());
+  store.registerLazySingleton(() => LoginViewModel());
 
-
-  //Network info __________________________
+  //Network Info __________________________
 
   store.registerLazySingleton<NetworkInfo>(()=>NetworkInfoImpl(InternetConnectionCheckerPlus()));
 
